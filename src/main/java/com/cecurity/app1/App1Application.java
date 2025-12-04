@@ -3,7 +3,11 @@ package com.cecurity.app1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.slf4j.*;
+
+import java.util.Arrays;
+
 @SpringBootApplication
 public class App1Application {
     private final static Logger log = LoggerFactory.getLogger( App1Application.class );
@@ -13,7 +17,14 @@ public class App1Application {
         app.setBannerMode( Banner.Mode.OFF );
         app.setLogStartupInfo( false );
         log.info( "Log with arguments {}, {} and {}", 1, "2", 3.0 );
-        app.run( args);
-	}
+        ApplicationContext ctx =app.run( args);
+        /*
+
+        Arrays.stream( ctx.getBeanDefinitionNames() )
+                .sorted()
+                .forEach( System.out::println );
+
+         */
+    }
 
 }
