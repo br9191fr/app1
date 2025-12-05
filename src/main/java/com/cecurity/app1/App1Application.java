@@ -14,8 +14,8 @@ public class App1Application {
 	public static void main(String[] args) {
         SpringApplication app = new SpringApplication( App1Application.class );
         app.setHeadless( false );
-        app.setBannerMode( Banner.Mode.OFF );
-        app.setLogStartupInfo( false );
+        app.setBannerMode( Banner.Mode.CONSOLE );
+        app.setLogStartupInfo( true);
         log.info( "Log with arguments {}, {} and {}", 1, "2", 3.0 );
         ApplicationContext ctx =app.run( args);
         /*
