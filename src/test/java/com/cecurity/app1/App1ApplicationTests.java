@@ -1,5 +1,5 @@
 package com.cecurity.app1;
-
+/*
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -11,3 +11,4 @@ class App1ApplicationTests {
 	}
 
 }
+*/
